@@ -1,2 +1,0 @@
-# demoPro
-Laravel PRo
