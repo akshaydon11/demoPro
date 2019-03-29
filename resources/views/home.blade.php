@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ $uses }}
+                    {{ $user }}
                 </div>
             </div>
         </div>
