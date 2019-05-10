@@ -27,3 +27,5 @@ Route::get('logout', function(){
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('getDetails', 'HomeController@getDetails')->name('details');
+
+Route::get('/send/email', 'HomeController@mail');
