@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Mail\Mailable;
+use App\Mail\WelcomeUser;
+use App\Mail\Markdowntemplate;
+use App\Mail\OrderShipped;
+//namespace App\Mail;
 
 class HomeController extends Controller
 {
@@ -31,5 +36,12 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         return response()->json(['success' => $user]);
+    }
+    public function mail()
+    {
+       $name = 'Akshay';
+       Mail::to('akshay@gmail.com')->send(new OrderShipped);
+       
+       return 'Email was sent';
     }
 }
