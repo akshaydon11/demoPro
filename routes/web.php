@@ -29,3 +29,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('getDetails', 'HomeController@getDetails')->name('details');
 
 Route::get('/send/email', 'HomeController@mail');
+
+Route::get('site/shutdown', function(){
+    return Artisan::call('down');
+});
+Route::get('site/live', function(){
+     
+}); 
